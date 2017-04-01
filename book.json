@@ -3,8 +3,9 @@
     "plugins": ["edit-link"],
     "pluginsConfig": {
       "edit-link": {
-        "base": "https://github.com/BradfordMedeiros/automate_docs/blob/master/docs",
+        "base": "https://github.com/BradfordMedeiros/automate_docs/tree/master/docs",
         "label": "Edit This Page"
       }
     }
 }
+
