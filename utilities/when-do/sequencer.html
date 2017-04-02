@@ -250,8 +250,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>Sequencer</p>
-
+                                <h1 id="whendo----sequencer"><em>when_do --&gt; sequencer</em></h1>
+<hr>
+<h3 id="description">Description</h3>
+<p><strong>sequencer</strong> is a utility class uses to string together functions a declare when they should happen.
+Upon calling run the actions will be executed as specified, and a promise returns that will be resolved when all actions have finished executing.</p>
+<p>Usage:
+arguments:
+functions:   The object that can be chained looks like below:</p>
+<pre><code>sequencer() // -&gt; returns a command that can be chained. below
+...
+{
+    then(function_to_run:function, ?number_of_times_to_run =1:number, ?delay_in_ms = 0:number): object, // batches a command to execute
+    wait(time_to_wait_in_ms: number): object,   // adds a wait command to execute
+    hold() : object // waits for promise to resolve
+    run(): Promise&lt;void&gt;   // runs the commands.  Promise resolves when batch is finishes.
+}
+</code></pre><h2 id="examples">Examples:</h2>
+<p>Ex1. Basic usage  Prints &apos;hello world&apos; 50 times, with 1 second delay in between each call</p>
+<pre><code>const sequencer = require(&quot;when_do&quot;).sequencer;
+sequencer().then(() =&gt; console.log(&apos;hello world&apos;, 50, 1000)).run();
+</code></pre><hr>
+<p>Ex2. Simple wait : Waits 5 seconds, and then uses the returned promise to display an alert to the user</p>
+<pre><code>const sequencer = require(&quot;when_do&quot;).sequencer;
+sequencer().wait(5000).run().then(() =&gt; window.alert(&apos;hello&apos;));
+</code></pre><p>Ex3.  Wait for network request, and then wait for 10 seconds, and run.</p>
+<pre><code>const sequencer = require(&quot;when_do&quot;).sequencer;
+sequencer().hold(fetch(URL)).wait(1000 * 10).then(() =&gt; console.log(&apos;waited 10 seconds after network request&apos;).run();
+</code></pre>
                                 
                                 </section>
                             
@@ -294,7 +320,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"sequencer","level":"1.3.1.2","depth":3,"next":{"title":"fs_mount_mqtt","level":"1.3.2","depth":2,"path":"utilities/fs_mount_mqtt/README.md","ref":"utilities/fs_mount_mqtt/README.md","articles":[]},"previous":{"title":"rules","level":"1.3.1.1","depth":3,"path":"utilities/when-do/rules.md","ref":"utilities/when-do/rules.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link"],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/BradfordMedeiros/automate_docs/tree/master/docs"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"utilities/when-do/sequencer.md","mtime":"2017-04-01T23:26:28.291Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-01T23:51:01.474Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"sequencer","level":"1.3.1.2","depth":3,"next":{"title":"fs_mount_mqtt","level":"1.3.2","depth":2,"path":"utilities/fs_mount_mqtt/README.md","ref":"utilities/fs_mount_mqtt/README.md","articles":[]},"previous":{"title":"rules","level":"1.3.1.1","depth":3,"path":"utilities/when-do/rules.md","ref":"utilities/when-do/rules.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link"],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/BradfordMedeiros/automate_docs/tree/master/docs"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"utilities/when-do/sequencer.md","mtime":"2017-04-02T05:23:44.985Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-02T05:28:12.220Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
