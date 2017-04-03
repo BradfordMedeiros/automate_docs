@@ -4,7 +4,7 @@
   * [Overview](automate/README.md)
   * [User-Interface](automate/ui.md)
   * [Communication](automate/communication.md)
-  * System
+  * [automate-core](automate/system/README.md)
     * [Actions](automate/system/actions.md)
     * [States](automate/system/states.md)
     * [Conditions](automate/system/conditions.md)

@@ -1,13 +1,15 @@
 ## *Communication* ##
 ------------
 
-### How do devices share information ###
+### How do devices share information? ###
 Devices communicate via MQTT.  
+
 All communication happens over MQTT.  The backend of automate includes an MQTT broker.
 Automate includes tooling that enhances MQTT topics, but does not violate anything you could otherwise do with MQTT.
 
-Automate does enhance topics, and to use the features, I recommend following following convention and I recommend
-reading about actions, states, and conditions before proceeding.
+The system also supports actions and states that are not powered via MQTT, and while the paradigm is perfectly supported,
+I recommend using MQTT to architect your system.  That being said, you can make you own judgements, and you probably know
+better for yourself than a general readme, because I don't have to lie to you to sell you anything.
 
 Using mqtt's pathing system topics publishes with these paths:
 

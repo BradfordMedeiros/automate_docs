@@ -3,7 +3,8 @@
   "scripts": {
     "start": "gitbook serve",
     "build": "rm -rf _book && gitbook build",
-    "deploy": "yarn run build && gh-pages -d _book"
+    "build_and_deploy": "yarn run build && gh-pages -d _book",
+    "deploy": "gh-pages -d _book"
   },
   "devDependencies": {
     "gh-pages": "^0.12.0",
