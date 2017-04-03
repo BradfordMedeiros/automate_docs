@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>sequencer · GitBook</title>
+        <title>Communication · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -12,20 +12,20 @@
         
         
     
-    <link rel="stylesheet" href="../../gitbook/style.css">
+    <link rel="stylesheet" href="../gitbook/style.css">
 
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
                 
             
         
@@ -53,14 +53,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../fs_mount_mqtt/" />
     
-    
-    <link rel="prev" href="rules.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -89,9 +87,9 @@
         
         
     
-        <li class="chapter " data-level="1.1" data-path="../../">
+        <li class="chapter " data-level="1.1" data-path="../">
             
-                <a href="../../">
+                <a href="../">
             
                     
                     Introduction
@@ -116,9 +114,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../../automate/">
+        <li class="chapter " data-level="1.2.1" data-path="./">
             
-                <a href="../../automate/">
+                <a href="./">
             
                     
                     Overview
@@ -129,9 +127,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../../automate/communication.html">
+        <li class="chapter active" data-level="1.2.2" data-path="communication.html">
             
-                <a href="../../automate/communication.html">
+                <a href="communication.html">
             
                     
                     Communication
@@ -218,9 +216,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../../configure.html">
+        <li class="chapter " data-level="1.3" data-path="../configure.html">
             
-                <a href="../../configure.html">
+                <a href="../configure.html">
             
                     
                     Configure
@@ -245,9 +243,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="./">
+        <li class="chapter " data-level="1.4.1" data-path="../utilities/when-do/">
             
-                <a href="./">
+                <a href="../utilities/when-do/">
             
                     
                     when-do
@@ -259,9 +257,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1.1" data-path="rules.html">
+        <li class="chapter " data-level="1.4.1.1" data-path="../utilities/when-do/rules.html">
             
-                <a href="rules.html">
+                <a href="../utilities/when-do/rules.html">
             
                     
                     rules
@@ -272,9 +270,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.1.2" data-path="sequencer.html">
+        <li class="chapter " data-level="1.4.1.2" data-path="../utilities/when-do/sequencer.html">
             
-                <a href="sequencer.html">
+                <a href="../utilities/when-do/sequencer.html">
             
                     
                     sequencer
@@ -290,9 +288,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../fs_mount_mqtt/">
+        <li class="chapter " data-level="1.4.2" data-path="../utilities/fs_mount_mqtt/">
             
-                <a href="../fs_mount_mqtt/">
+                <a href="../utilities/fs_mount_mqtt/">
             
                     
                     fs_mount_mqtt
@@ -303,9 +301,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../mqtt_mongo/">
+        <li class="chapter " data-level="1.4.3" data-path="../utilities/mqtt_mongo/">
             
-                <a href="../mqtt_mongo/">
+                <a href="../utilities/mqtt_mongo/">
             
                     
                     mqtt_mongo
@@ -351,7 +349,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >sequencer</a>
+        <a href=".." >Communication</a>
     </h1>
 </div>
 
@@ -366,34 +364,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="whendo----sequencer"><em>when_do --&gt; sequencer</em></h1>
+                                <h2 id="communication"><em>Communication</em></h2>
 <hr>
-<h3 id="description">Description</h3>
-<p><strong>Sequencer</strong> is a utility class uses to string together functions a declare when they should happen.
-Upon calling run the actions will be executed as specified, and a promise returns that will be resolved when all actions have finished executing.</p>
-<p>Usage:
-arguments:
-functions:   The object that can be chained looks like below:</p>
-<pre><code>sequencer() // -&gt; returns a command that can be chained. below
-...
-{
-    then(function_to_run:function, ?number_of_times_to_run =1:number, ?delay_in_ms = 0:number): object, // batches a command to execute
-    wait(time_to_wait_in_ms: number): object,   // adds a wait command to execute
-    hold() : object // waits for promise to resolve
-    run(): Promise&lt;void&gt;   // runs the commands.  Promise resolves when batch is finishes.
-}
-</code></pre><h2 id="examples">Examples:</h2>
-<p>Ex1. Basic usage  Prints &apos;hello world&apos; 50 times, with 1 second delay in between each call</p>
-<pre><code>const sequencer = require(&quot;when_do&quot;).sequencer;
-sequencer().then(() =&gt; console.log(&apos;hello world&apos;, 50, 1000)).run();
-</code></pre><hr>
-<p>Ex2. Simple wait : Waits 5 seconds, and then uses the returned promise to display an alert to the user</p>
-<pre><code>const sequencer = require(&quot;when_do&quot;).sequencer;
-sequencer().wait(5000).run().then(() =&gt; window.alert(&apos;hello&apos;));
-</code></pre><p>Ex3.  Wait for network request, and then wait for 10 seconds, and run.</p>
-<pre><code>const sequencer = require(&quot;when_do&quot;).sequencer;
-sequencer().hold(fetch(URL)).wait(1000 * 10).then(() =&gt; console.log(&apos;waited 10 seconds after network request&apos;).run();
-</code></pre>
+<h3 id="how-do-devices-share-information">How do devices share information</h3>
+<p>Devices communicate via MQTT.<br>All communication happens over MQTT.  The backend of automate includes an MQTT broker.
+Automate includes tooling that enhances MQTT topics, but does not violate anything you could otherwise do with MQTT.</p>
+<p>Automate does enhance topics, and to use the features, I recommend following following convention and I recommend
+reading about actions, states, and conditions before proceeding.</p>
+<p>Using mqtt&apos;s pathing system topics publishes with these paths:</p>
+<p>actions: /action/<rest of="" topic="" path="">
+states: /state/<rest of="" topic="" path=""></rest></rest></p>
+<p>Simply by publishes to the state endpoint, you will be able to use it in the mqtt system and create conditions, sequences, see graphs in the UI, and so on.</p>
+<p>Currently, besides the actions and states, there is another special path which is used as an event log:
+/event/<rest of="" path=""></rest></p>
+<p>Events can be configured by the user to send of emails, or text messages, etc.  See events for more information (coming soon).</p>
+
                                 
                                 </section>
                             
@@ -420,14 +405,10 @@ sequencer().hold(fetch(URL)).wait(1000 * 10).then(() =&gt; console.log(&apos;wai
 
             
                 
-                <a href="rules.html" class="navigation navigation-prev " aria-label="Previous page: rules">
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Overview">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../fs_mount_mqtt/" class="navigation navigation-next " aria-label="Next page: fs_mount_mqtt">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -436,41 +417,41 @@ sequencer().hold(fetch(URL)).wait(1000 * 10).then(() =&gt; console.log(&apos;wai
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"sequencer","level":"1.4.1.2","depth":3,"next":{"title":"fs_mount_mqtt","level":"1.4.2","depth":2,"path":"utilities/fs_mount_mqtt/README.md","ref":"utilities/fs_mount_mqtt/README.md","articles":[]},"previous":{"title":"rules","level":"1.4.1.1","depth":3,"path":"utilities/when-do/rules.md","ref":"utilities/when-do/rules.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link"],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/BradfordMedeiros/automate_docs/tree/master/docs"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"utilities/when-do/sequencer.md","mtime":"2017-04-03T04:04:34.195Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-03T04:46:24.244Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Communication","level":"1.2.2","depth":2,"next":{"title":"System","level":"1.2.3","depth":2,"ref":"","articles":[{"title":"[Actions] - doc coming soon","level":"1.2.3.1","depth":3,"ref":"","articles":[]},{"title":"[States]  - doc coming soon","level":"1.2.3.2","depth":3,"ref":"","articles":[]},{"title":"[Conditions] - doc coming soon","level":"1.2.3.3","depth":3,"ref":"","articles":[]},{"title":"[Sequences] - doc coming soon","level":"1.2.3.4","depth":3,"ref":"","articles":[]}]},"previous":{"title":"Overview","level":"1.2.1","depth":2,"path":"automate/README.md","ref":"automate/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link"],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/BradfordMedeiros/automate_docs/tree/master/docs"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"automate/communication.md","mtime":"2017-04-03T04:41:00.086Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-03T04:46:24.244Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    <script src="../../gitbook/gitbook.js"></script>
-    <script src="../../gitbook/theme.js"></script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
 
