@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="system/" />
+    
     
     <link rel="prev" href="ui.html" />
     
@@ -153,14 +155,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" >
+        <li class="chapter " data-level="1.2.4" data-path="system/">
             
-                <span>
+                <a href="system/">
             
                     
-                    System
+                    automate-core
             
-                </span>
+                </a>
             
 
             
@@ -379,11 +381,13 @@
                                 
                                 <h2 id="communication"><em>Communication</em></h2>
 <hr>
-<h3 id="how-do-devices-share-information">How do devices share information</h3>
-<p>Devices communicate via MQTT.<br>All communication happens over MQTT.  The backend of automate includes an MQTT broker.
+<h3 id="how-do-devices-share-information">How do devices share information?</h3>
+<p>Devices communicate via MQTT.  </p>
+<p>All communication happens over MQTT.  The backend of automate includes an MQTT broker.
 Automate includes tooling that enhances MQTT topics, but does not violate anything you could otherwise do with MQTT.</p>
-<p>Automate does enhance topics, and to use the features, I recommend following following convention and I recommend
-reading about actions, states, and conditions before proceeding.</p>
+<p>The system also supports actions and states that are not powered via MQTT, and while the paradigm is perfectly supported,
+I recommend using MQTT to architect your system.  That being said, you can make you own judgements, and you probably know
+better for yourself than a general readme, because I don&apos;t have to lie to you to sell you anything.</p>
 <p>Using mqtt&apos;s pathing system topics publishes with these paths:</p>
 <p>actions: /action/<rest of="" topic="" path="">
 states: /state/<rest of="" topic="" path=""></rest></rest></p>
@@ -418,10 +422,14 @@ states: /state/<rest of="" topic="" path=""></rest></rest></p>
 
             
                 
-                <a href="ui.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: User-Interface">
+                <a href="ui.html" class="navigation navigation-prev " aria-label="Previous page: User-Interface">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="system/" class="navigation navigation-next " aria-label="Next page: automate-core">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -430,7 +438,7 @@ states: /state/<rest of="" topic="" path=""></rest></rest></p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Communication","level":"1.2.3","depth":2,"next":{"title":"System","level":"1.2.4","depth":2,"ref":"","articles":[{"title":"Actions","level":"1.2.4.1","depth":3,"path":"automate/system/actions.md","ref":"automate/system/actions.md","articles":[]},{"title":"States","level":"1.2.4.2","depth":3,"path":"automate/system/states.md","ref":"automate/system/states.md","articles":[]},{"title":"Conditions","level":"1.2.4.3","depth":3,"path":"automate/system/conditions.md","ref":"automate/system/conditions.md","articles":[]},{"title":"Sequences","level":"1.2.4.4","depth":3,"path":"automate/system/sequences.md","ref":"automate/system/sequences.md","articles":[]}]},"previous":{"title":"User-Interface","level":"1.2.2","depth":2,"path":"automate/ui.md","ref":"automate/ui.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link"],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/BradfordMedeiros/automate_docs/tree/master/docs"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"automate/communication.md","mtime":"2017-04-03T04:41:00.086Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-03T06:06:32.687Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Communication","level":"1.2.3","depth":2,"next":{"title":"automate-core","level":"1.2.4","depth":2,"path":"automate/system/README.md","ref":"automate/system/README.md","articles":[{"title":"Actions","level":"1.2.4.1","depth":3,"path":"automate/system/actions.md","ref":"automate/system/actions.md","articles":[]},{"title":"States","level":"1.2.4.2","depth":3,"path":"automate/system/states.md","ref":"automate/system/states.md","articles":[]},{"title":"Conditions","level":"1.2.4.3","depth":3,"path":"automate/system/conditions.md","ref":"automate/system/conditions.md","articles":[]},{"title":"Sequences","level":"1.2.4.4","depth":3,"path":"automate/system/sequences.md","ref":"automate/system/sequences.md","articles":[]}]},"previous":{"title":"User-Interface","level":"1.2.2","depth":2,"path":"automate/ui.md","ref":"automate/ui.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"automate/communication.md","mtime":"2017-04-03T06:43:09.988Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-03T07:06:50.676Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -438,10 +446,6 @@ states: /state/<rest of="" topic="" path=""></rest></rest></p>
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
