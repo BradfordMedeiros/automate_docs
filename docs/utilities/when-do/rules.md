@@ -2,22 +2,24 @@
 ------------
 
 ### Description ###
-**rules** is a utility class to evaulate when certain conditions become true.
+**Rules** is a utility class to evaulate when certain conditions become true.
+
 Upon calling do the actions will start to be evaluated.  Functions used as evaluators should be pure and lightweight.
 The library works internally by calling these functions and evaluating them on a loop. This means it fits certain use
 cases well, but is not meant as a replacement for a basic if statement since it is a continuous check.
 
 General pattern is below:
-When the evaluator returns true, the function will call function_to_perform.  The object_to_evaluate will then be passed as arguements into the function_to_perform
+When the evaluator returns true, the function will call function_to_perform.  The object_to_evaluate will then be passed as arguements into the function_to_perform.
 Options may be specified that specify the frequency to call the evaluator, rate, action limit, rate limit.  See below for details
 
+### General Usage ###
 
 ~~~~
-rules.(evaluator).do(function_to_perform: function, options: object)
+const handle = rules.(evaluator).do(function_to_perform: function, options: object)
 ~~~~
 
 
-Methods
+##### Evaluator Methods #####
 
 ~~~~
     when(object_to_evaluate: any, evaluator_function: function<bool>): function // will perform the action when the evaluator is true
@@ -25,7 +27,7 @@ Methods
     expectWithin(evaluator_function1: function<bool>, evaluator_function2: function<bool>, action: function<any>, resolve, reject): function // when the first condition becomes true, call the resolve callback if the func2 returns true, else call the back callback
 ~~~~
 
-Options specification: 
+##### Options Specification #####
 
 ~~~~
 options = {
@@ -35,6 +37,7 @@ options = {
 }
 ~~~~
 
+##### Handle #####
 ~~~~
 
 const handle = {
