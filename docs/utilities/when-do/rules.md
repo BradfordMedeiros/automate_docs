@@ -2,7 +2,7 @@
 ------------
 
 ### Description ###
-**Rules** is a utility class to evaulate when certain conditions become true.
+**Rules** is a utility class to evaluate when certain conditions become true.
 
 Upon calling do the actions will start to be evaluated.  Functions used as evaluators should be pure and lightweight.
 The library works internally by calling these functions and evaluating them on a loop. This means it fits certain use
