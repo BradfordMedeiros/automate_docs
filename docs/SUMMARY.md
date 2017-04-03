@@ -2,14 +2,15 @@
 
 * Automate
   * [Overview](automate/README.md)
+  * [User-Interface](automate/ui.md)
   * [Communication](automate/communication.md)
   * System
-    * [Actions] - doc coming soon
-    * [States]  - doc coming soon
-    * [Conditions] - doc coming soon
-    * [Sequences] - doc coming soon
+    * [Actions](automate/system/actions.md)
+    * [States](automate/system/states.md)
+    * [Conditions](automate/system/conditions.md)
+    * [Sequences](automate/system/sequences.md)
+  * [Events](automate/events.md)
     
-* [Configure](/configure.md)
 * Utilities
   * [when-do](utilities/when-do/README.md)
     * [rules](utilities/when-do/rules.md)
