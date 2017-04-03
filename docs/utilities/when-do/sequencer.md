@@ -2,7 +2,7 @@
 ------------
 
 ### Description ###
-**sequencer** is a utility class uses to string together functions a declare when they should happen.
+**Sequencer** is a utility class uses to string together functions a declare when they should happen.
 Upon calling run the actions will be executed as specified, and a promise returns that will be resolved when all actions have finished executing.
 
 Usage:
