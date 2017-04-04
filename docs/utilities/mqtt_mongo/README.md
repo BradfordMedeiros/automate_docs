@@ -1,38 +1,43 @@
-# *when-do* --> mqtt_mongo #
-------------
+# mqtt_mongo
 
 ### Description ###
-**mqtt_mongo** is an npm library used in automate that allows you to log all mqtt topics to a mongo database.
+Logs mqtt topics to a mongo database.  All topics are logged to the collection topics.
+Special collection called events produced which will log redundant topics that are prefixed with /event and logged to the collection events.
 
-API
-~~~~
-    function: 
-        log_mqtt_topics_to_mongo(MQTT_BROKER_URL: string, MONGO_URL: string, MQTT_CONNECTION_TIMEOUT_IN_MS: Number, MONGO_CONNECTION_TIMEOUT_IN_MS: Number
-~~~~
+This requires you to have a MQTT broker and MongoDB instance that you can connect to.
 
-### Basic Usage through CLI ###
-~~~
-    mqtt_mongo -mongoURL <mongoUrl> -mqttURL <mqttUrl>
+
+### Usage ###
 ~~~
 
-### Basic Usage as Code ###
-~~~~
 const mqtt_mongo = require('mqtt_mongo');
-mqtt_mongo.iog_mqtt_topics_to_mongo(MQTT_BROKER_URL, MONGO_URL);
-~~~~
 
-### Accessing the MongoDb and MQTT clients ###
-Note: This promise will resolve upon succesful connection to the MQTT and Mongo brokers
-~~~
-const mqtt_mongo = require('mqtt_mongo');
-mqtt_mongo
-    .iog_mqtt_topics_to_mongo(MQTT_BROKER_URL, MONGO_URL)
-    .then((mongoConnection, mqttConnection) => {
-        ...
-    });
+const config = {
+  MQTT_URL : 'http://127.0.0.1:1883', 
+  MONGO_URL: 'mongodb://localhost:27017/databaseName' 
+}
+
+mqtt_mongo.logMqttToMongo(config);
+
 ~~~
 
-#### Installation ####
+
+An example of a record from the topic collection:
 ~~~~
-npm install mqtt_mongo
+{ 
+  "_id" : ObjectId("58e34271bd9277145fae0258"), 
+  "topic" : "/any/topic/here", 
+  "message" : "324234", 
+  "timestamp" : ISODate("2017-04-04T06:51:29.832Z") 
+}
 ~~~~
+
+And a record the event collection:
+~~~~
+{ 
+  "_id" : ObjectId("58e3423a2ba24d13fb898214"), 
+  "event" : "event/can/be/used/for/a/variety/of/special/purposes/or/not/at/all", 
+  "timestamp" : ISODate("2017-04-04T06:51:29.832Z") 
+}
+~~~~
+
