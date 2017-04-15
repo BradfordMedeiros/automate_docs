@@ -379,7 +379,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h2 id="actions"><em>Actions</em></h2>
+<hr>
+<h3 id="what-is-an-action">What is an action?</h3>
+<p>An action is something that the system can do. 
+For example, an action may be to open a door, set the room temperature, send an email, and so on. </p>
+<p>Actions represent a unit of what the system can do, and can be used in sequences, conditions, and will show up as actions
+available to the user within the UI.</p>
+<p>Actions can be configured in automate in two ways.</p>
+<ul>
+<li>MQTT topics</li>
+<li>Executabe or js in automate_core folder</li>
+</ul>
+<h3 id="how-do-i-create-an-action">How do I create an action</h3>
+<p>If the action is an MQTT topic, actions are implied and the system will automatically register them in the system 
+and therefore the UI when a topic with the prefix /action/ is sent out.</p>
+<p>You can also create an action via placing an execute or js file in the /actions directory of automate_core root folder.
+These needs to live in /actions folder and be name <anything>.action.<js else="" assumed="" executable=""></js></anything></p>
+<h3 id="using-automate-ui-to-create-actions">Using automate UI to create actions</h3>
+<p>You can create actions via the automate ui as well.  Currently the UI supports making javascript actions only. 
+You can use it how you see fit, but javascript actions are created with the intent of sending simple scripts, 
+especially involving basic http triggering.  This will actually live on the backend as opposed to being an action trigger from 
+a stand alone device. </p>
+
                                 
                                 </section>
                             
@@ -422,7 +444,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Actions","level":"1.2.4.1","depth":3,"next":{"title":"States","level":"1.2.4.2","depth":3,"path":"automate/system/states.md","ref":"automate/system/states.md","articles":[]},"previous":{"title":"automate-core","level":"1.2.4","depth":2,"path":"automate/system/README.md","ref":"automate/system/README.md","articles":[{"title":"Actions","level":"1.2.4.1","depth":3,"path":"automate/system/actions.md","ref":"automate/system/actions.md","articles":[]},{"title":"States","level":"1.2.4.2","depth":3,"path":"automate/system/states.md","ref":"automate/system/states.md","articles":[]},{"title":"Conditions","level":"1.2.4.3","depth":3,"path":"automate/system/conditions.md","ref":"automate/system/conditions.md","articles":[]},{"title":"Sequences","level":"1.2.4.4","depth":3,"path":"automate/system/sequences.md","ref":"automate/system/sequences.md","articles":[]}]},"dir":"neutral"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"automate/system/actions.md","mtime":"2017-04-03T04:54:35.934Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-04T07:31:57.949Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Actions","level":"1.2.4.1","depth":3,"next":{"title":"States","level":"1.2.4.2","depth":3,"path":"automate/system/states.md","ref":"automate/system/states.md","articles":[]},"previous":{"title":"automate-core","level":"1.2.4","depth":2,"path":"automate/system/README.md","ref":"automate/system/README.md","articles":[{"title":"Actions","level":"1.2.4.1","depth":3,"path":"automate/system/actions.md","ref":"automate/system/actions.md","articles":[]},{"title":"States","level":"1.2.4.2","depth":3,"path":"automate/system/states.md","ref":"automate/system/states.md","articles":[]},{"title":"Conditions","level":"1.2.4.3","depth":3,"path":"automate/system/conditions.md","ref":"automate/system/conditions.md","articles":[]},{"title":"Sequences","level":"1.2.4.4","depth":3,"path":"automate/system/sequences.md","ref":"automate/system/sequences.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"automate/system/actions.md","mtime":"2017-04-15T09:05:47.552Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-15T09:17:06.120Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
