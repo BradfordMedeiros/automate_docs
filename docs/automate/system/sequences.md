@@ -18,7 +18,7 @@ The sequence has the following structure:
 ~~~~
 {
     "actions": [ array of directives]
-     ]
+  
 }
 ~~~~
 where the two types of directives are:
