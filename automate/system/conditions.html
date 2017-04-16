@@ -60,8 +60,6 @@
     <link rel="next" href="sequences.html" />
     
     
-    <link rel="prev" href="states.html" />
-    
 
     </head>
     <body>
@@ -169,20 +167,21 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.4.1" data-path="actions.html">
+        <li class="chapter " data-level="1.2.4.1" >
             
-                <a href="actions.html">
+                <span>
             
                     
-                    Actions
+                    Axioms
             
-                </a>
+                </span>
             
 
             
-        </li>
+            <ul class="articles">
+                
     
-        <li class="chapter " data-level="1.2.4.2" data-path="states.html">
+        <li class="chapter " data-level="1.2.4.1.1" data-path="states.html">
             
                 <a href="states.html">
             
@@ -195,25 +194,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4.3" data-path="conditions.html">
+        <li class="chapter " data-level="1.2.4.1.2" data-path="actions.html">
             
-                <a href="conditions.html">
-            
-                    
-                    Conditions
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.4.4" data-path="sequences.html">
-            
-                <a href="sequences.html">
+                <a href="actions.html">
             
                     
-                    Sequences
+                    Actions
             
                 </a>
             
@@ -226,7 +212,47 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="../events.html">
+        <li class="chapter " data-level="1.2.4.2" >
+            
+                <span>
+            
+                    
+                    Features
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.4.2.1" data-path="conditions.html">
+            
+                <a href="conditions.html">
+            
+                    
+                    Conditions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2.2" data-path="sequences.html">
+            
+                <a href="sequences.html">
+            
+                    
+                    Sequences
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2.3" data-path="../events.html">
             
                 <a href="../events.html">
             
@@ -236,6 +262,16 @@
                 </a>
             
 
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -379,7 +415,26 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h2 id="conditions"><em>Conditions</em></h2>
+<hr>
+<h3 id="what-is-a-condition">What is a condition?</h3>
+<p>A condition is a rule to perform actions, given system state. 
+For example, a condition may be to turn on the fan when the room gets hot, turn a light on when it is dark, and so on. </p>
+<p>Conditions allow the user to perform logic that will happen automatically when the system is in a certain state</p>
+<h3 id="how-do-i-create-a-condition">How do I create a condition</h3>
+<p>A condition is a json configuration file that has the following format.<br>The actions are called when the eval statement returns true.  </p>
+<p>The condition has the following structure:</p>
+<pre><code>{
+    &quot;state&quot;:[array of states to used in the condition evaluation], // required
+    &quot;eval&quot;: &lt;evaluation function ==&gt; states are passed in as arguments in the order of the states&gt; // required
+    &quot;action&quot;:[array of actions to perform when the eval returns true],          // required
+    &quot;values&quot;: &lt; map from action name to parameter to pass into that action &gt;    // optional   
+}
+</code></pre><p>More functionality will be added to specify rate limiting, frequency, transitions, and so on very soon.</p>
+<h3 id="using-automate-ui-to-create-conditions">Using automate UI to create conditions</h3>
+<p>You can create conditions via the automate ui as well.  Currently the UI is simply a layer that allows you to input the 
+json condition format above.  This is considered temporary and will eventually support a more noob friendly method.</p>
+
                                 
                                 </section>
                             
@@ -406,12 +461,8 @@
 
             
                 
-                <a href="states.html" class="navigation navigation-prev " aria-label="Previous page: States">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
-                
-                <a href="sequences.html" class="navigation navigation-next " aria-label="Next page: Sequences">
+                <a href="sequences.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Sequences">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -422,7 +473,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Conditions","level":"1.2.4.3","depth":3,"next":{"title":"Sequences","level":"1.2.4.4","depth":3,"path":"automate/system/sequences.md","ref":"automate/system/sequences.md","articles":[]},"previous":{"title":"States","level":"1.2.4.2","depth":3,"path":"automate/system/states.md","ref":"automate/system/states.md","articles":[]},"dir":"neutral"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"automate/system/conditions.md","mtime":"2017-04-10T06:41:56.616Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-15T09:17:06.120Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Conditions","level":"1.2.4.2.1","depth":4,"next":{"title":"Sequences","level":"1.2.4.2.2","depth":4,"path":"automate/system/sequences.md","ref":"automate/system/sequences.md","articles":[]},"previous":{"title":"Features","level":"1.2.4.2","depth":3,"ref":"","articles":[{"title":"Conditions","level":"1.2.4.2.1","depth":4,"path":"automate/system/conditions.md","ref":"automate/system/conditions.md","articles":[]},{"title":"Sequences","level":"1.2.4.2.2","depth":4,"path":"automate/system/sequences.md","ref":"automate/system/sequences.md","articles":[]},{"title":"Events","level":"1.2.4.2.3","depth":4,"path":"automate/events.md","ref":"automate/events.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"automate/system/conditions.md","mtime":"2017-04-16T05:04:53.428Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-16T05:17:38.265Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

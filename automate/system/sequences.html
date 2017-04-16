@@ -169,20 +169,21 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.4.1" data-path="actions.html">
+        <li class="chapter " data-level="1.2.4.1" >
             
-                <a href="actions.html">
+                <span>
             
                     
-                    Actions
+                    Axioms
             
-                </a>
+                </span>
             
 
             
-        </li>
+            <ul class="articles">
+                
     
-        <li class="chapter " data-level="1.2.4.2" data-path="states.html">
+        <li class="chapter " data-level="1.2.4.1.1" data-path="states.html">
             
                 <a href="states.html">
             
@@ -195,25 +196,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.3" data-path="conditions.html">
+        <li class="chapter " data-level="1.2.4.1.2" data-path="actions.html">
             
-                <a href="conditions.html">
-            
-                    
-                    Conditions
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.2.4.4" data-path="sequences.html">
-            
-                <a href="sequences.html">
+                <a href="actions.html">
             
                     
-                    Sequences
+                    Actions
             
                 </a>
             
@@ -226,7 +214,47 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="../events.html">
+        <li class="chapter " data-level="1.2.4.2" >
+            
+                <span>
+            
+                    
+                    Features
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.2.1" data-path="conditions.html">
+            
+                <a href="conditions.html">
+            
+                    
+                    Conditions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4.2.2" data-path="sequences.html">
+            
+                <a href="sequences.html">
+            
+                    
+                    Sequences
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2.3" data-path="../events.html">
             
                 <a href="../events.html">
             
@@ -236,6 +264,16 @@
                 </a>
             
 
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -379,7 +417,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h2 id="sequences"><em>Sequences</em></h2>
+<hr>
+<h3 id="what-is-a-sequence">What is a sequence?</h3>
+<p>A sequence is a specification to perform one or more actions in a particular sequence, or order, 
+with extra timing information.</p>
+<p>A sequence can be thought of a special type of action, which is a grouping of actions.
+For example, given you have an action available to turn off the light, and another action to turn on the tv, and then on to turn on your video game system,
+you may specify a sequence as turning on the lights, then two seconds later turning on the tv and video game system.</p>
+<h3 id="how-do-i-create-a-sequence">How do I create a sequence</h3>
+<p>A sequence is a json configuration file that has the following format.<br>The sequence has the following structure:</p>
+<pre><code>{
+    &quot;actions&quot;: [ array of directives]
+
+}
+</code></pre><p>where the two types of directives are:
+Meaning to call and action and pass in he paramteres to it as specified in value</p>
+<pre><code>{
+    &quot;name&quot;: &quot;action&quot;
+    &quot;value&quot;: &lt;value&gt;
+}
+</code></pre><p>or </p>
+<pre><code>{
+    &quot;name&quot;: &quot;wait&quot;
+    &quot;value&quot;: &lt;time to wait in ms&gt;
+}
+</code></pre><h3 id="using-automate-ui-to-create-sequences">Using automate UI to create sequences</h3>
+<p>Coming soon</p>
+
                                 
                                 </section>
                             
@@ -422,7 +487,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Sequences","level":"1.2.4.4","depth":3,"next":{"title":"Events","level":"1.2.5","depth":2,"path":"automate/events.md","ref":"automate/events.md","articles":[]},"previous":{"title":"Conditions","level":"1.2.4.3","depth":3,"path":"automate/system/conditions.md","ref":"automate/system/conditions.md","articles":[]},"dir":"neutral"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"automate/system/sequences.md","mtime":"2017-04-10T06:41:56.616Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-15T09:17:06.120Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Sequences","level":"1.2.4.2.2","depth":4,"next":{"title":"Events","level":"1.2.4.2.3","depth":4,"path":"automate/events.md","ref":"automate/events.md","articles":[]},"previous":{"title":"Conditions","level":"1.2.4.2.1","depth":4,"path":"automate/system/conditions.md","ref":"automate/system/conditions.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"automate/system/sequences.md","mtime":"2017-04-16T05:17:14.208Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-16T05:17:38.265Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
