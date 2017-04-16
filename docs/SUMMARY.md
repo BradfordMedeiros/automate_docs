@@ -5,11 +5,13 @@
   * [User-Interface](automate/ui.md)
   * [Communication](automate/communication.md)
   * [automate-core](automate/system/README.md)
-    * [Actions](automate/system/actions.md)
-    * [States](automate/system/states.md)
-    * [Conditions](automate/system/conditions.md)
-    * [Sequences](automate/system/sequences.md)
-  * [Events](automate/events.md)
+    * Axioms
+        * [States](automate/system/states.md)
+        * [Actions](automate/system/actions.md)
+    * Features
+        * [Conditions](automate/system/conditions.md)
+        * [Sequences](automate/system/sequences.md)
+        * [Events](automate/events.md)
     
 * Utilities
   * [when-do](utilities/when-do/README.md)
