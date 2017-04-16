@@ -1,13 +1,11 @@
 ## *Conditions* ##
 ------------
 
-### What is an action? ###
+### What is a condition? ###
 A condition is a rule to perform actions, given system state. 
-For example, an action may be to turn on the fan when the room gets hot, turn a light on when it is dark, and so on. 
+For example, a condition may be to turn on the fan when the room gets hot, turn a light on when it is dark, and so on. 
 
 Conditions allow the user to perform logic that will happen automatically when the system is in a certain state
-
-Conditions may be created via the automate UI.
 
 
 ### How do I create a condition ###
@@ -26,6 +24,7 @@ The condition has the following structure:
 }
 ~~~~
 
+More functionality will be added to specify rate limiting, frequency, transitions, and so on very soon.
 
 ### Using automate UI to create conditions ###
 You can create conditions via the automate ui as well.  Currently the UI is simply a layer that allows you to input the 
